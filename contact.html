@@ -58,17 +58,17 @@
       </div>
       <div>
         <h2>You can also reach me by filling the form below</h2>
-        <form action="#" method="post" id="contact-form">
+        <form action="#" method="post" id="contact-form" onsubmit="alert('Your contact submitted successfully!')">
         <!--E-mail input-->
           <label class="standard-label" for="contact-email">Email: </label>
           <input type="email" id="contact-email" required><br><br>
     <!--Telephone input-->
           <label class="standard-label" for="contact-telephone">Telephone: </label>
-          <input type="tel"  id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br><br>
+          <input type="tel"  id="contact-telephone" placeholder="333-333-3333" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br><br>
       <!--Message input-->
           <label class="standard-label" for="contact-message">Message: </label>
           <textarea required maxlength="240" id="contact-message"></textarea><br><br>
-          <button type="button" class="button">Send message</button>
+          <button type="submit" class="button">Send message</button>
         </form>
       </div>
 
