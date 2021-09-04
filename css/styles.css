@@ -14,21 +14,23 @@ Active   color: #E07A5F
 
 */
 :root {
-    --eggshell: #f4f1de;
-    --terracotta: #e07a5f;
-    --independenca: #3d405b;
-    --greensheen: #81b29a;
-    --de_champagne: #f2cc8f;
-    --padding: 20px;
+  --background-color: #f4f1de;
+  --active-color: #e07a5f;
+  --base-font-color: #3d405b;
+  --hover-text-color: #81b29a;
+  --grid-background-color: #f2cc8f;
+  --padding: 20px;
+  --width: 100%;
+  --font-size_10: 10px;
+  --font-width_700: 700;
 }
 
 * {
   box-sizing: border-box;
 }
-
 body {
-  background-color: var(--eggshell);
-  color: var(--independence);
+  background-color: var(--background-color);
+  color:   var(--base-font-color);
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -43,22 +45,22 @@ body {
 
 h1 {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: var(--font-width_700);
 }
 
 h2 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--font-width_700);
 }
 
 h3 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: var(--font-width_700);
 }
 
 /*base font color*/
 a {
-  color: var(--independence);
+  color:   var(--base-font-color);
 }
 
 a:visited {
@@ -69,14 +71,14 @@ a:visited {
 a:hover a:focus{
   /* No underlining when hovering over a link */
   text-decoration: none;
-  color: var(--terracotta);
+  color: var(--active-color);
   transition-duration: 0.2s;
   transition-property: opacity;
 }
 
 a:active {
   /* selected link */
-  color: var(--greensheen);
+  color: var(--hover-text-color:);
 }
 
 .content {
@@ -251,7 +253,7 @@ button:hover, button:focus {
     font-size: 22px;
   }
   #id_text {
-    font-size: 10px;
+    font-size: var(--font-size_10);
     font-style: italic;
     text-align: right;
   }
@@ -272,7 +274,7 @@ button:hover, button:focus {
     font-size: 22px;
   }
   #id_text {
-    font-size: 10px;
+    font-size: var(--font-size_10);
     font-style: italic;
     text-align: right;
   }
@@ -319,25 +321,24 @@ button:active {
 }
 
 @keyframes color-change {
-    0%{
-        fill: var(--terracotta);
-    }
-    50%{
-        fill: var(--de_champagne);
-    }
-    75%{
-        fill: var(--greensheen);
-    }
-    100% {
-        fill:var(--independence);
-    }
+  0%{
+    fill: var(--active-color);
   }
+  50%{
+    fill: var(--grid-background-color);
+  }
+  75%{
+    fill: var(--hover-text-color);
+  }
+  100% {
+    fill:  var(--base-font-color);
+  }
+}
 
 
 svg path, polygon {
   animation: 4s color-change infinite alternate linear;
 }
-
 @keyframes cloud-move {
   from {
     transform: translate(0, 50px);

@@ -5,7 +5,6 @@
 * Browsers: last 4 version
 */
 
-
 /*
 Colors used
 
@@ -26,10 +25,9 @@ Active   color: #E07A5F
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-
 body {
   background-color: #f4f1de;
-  color: undefined;
+  color:   #3d405b;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -59,7 +57,7 @@ h3 {
 
 /*base font color*/
 a {
-  color: undefined;
+  color:   #3d405b;
 }
 
 a:visited {
@@ -81,12 +79,12 @@ a:hover a:focus{
 
 a:active {
   /* selected link */
-  color: #81b29a;
+  color: undefined;
 }
 
 .content {
   text-align: center;
-  width: undefined;
+  width: 100%;
   padding: 20px;
 }
 
@@ -99,7 +97,7 @@ table {
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
-  width: undefined;
+  width: 100%;
   padding: 20px;
 }
 
@@ -198,7 +196,7 @@ table {
 }
 .content {
   text-align: center;
-  width: undefined;
+  width: 100%;
   padding: 20px;
 }
 
@@ -233,6 +231,7 @@ button:hover, button:focus {
 }
 .navigation-list__item--active {
   text-decoration: none;
+  color: darkblue;
 }
 
 /*media queries for max width 750px*/
@@ -365,41 +364,40 @@ button:active {
 }
 
 @-webkit-keyframes color-change {
-    0%{
-        fill: #e07a5f;
-    }
-    50%{
-        fill: #f2cc8f;
-    }
-    75%{
-        fill: #81b29a;
-    }
-    100% {
-        fill:undefined;
-    }
+  0%{
+    fill: #e07a5f;
   }
+  50%{
+    fill: #f2cc8f;
+  }
+  75%{
+    fill: #81b29a;
+  }
+  100% {
+    fill:  #3d405b;
+  }
+}
 
 @keyframes color-change {
-    0%{
-        fill: #e07a5f;
-    }
-    50%{
-        fill: #f2cc8f;
-    }
-    75%{
-        fill: #81b29a;
-    }
-    100% {
-        fill:undefined;
-    }
+  0%{
+    fill: #e07a5f;
   }
+  50%{
+    fill: #f2cc8f;
+  }
+  75%{
+    fill: #81b29a;
+  }
+  100% {
+    fill:  #3d405b;
+  }
+}
 
 
 svg path, polygon {
   -webkit-animation: 4s color-change infinite alternate linear;
           animation: 4s color-change infinite alternate linear;
 }
-
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
@@ -410,7 +408,6 @@ svg path, polygon {
             transform: translate(200px, 50px);
   }
 }
-
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
@@ -464,5 +461,5 @@ svg path, polygon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-            text-align:center;
+  text-align:center;
 }
